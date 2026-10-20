@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project 3</title>
+    <style> 
+     body {
+    margin: 0;
+    background: rgb(0, 0, 0);
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 4px;
+    padding: 4px;
+  }
+
+        .box{
+            width:252px;
+            height:252px;
+             background: var(--colour);
+transition:
+      background-color 0.1s ease,
+      border-radius 0.1s ease;
+  }
+.box:hover {
+    background: var(--change);
+    border-radius: 30%;
+  }
+   .box:nth-child(6n + 1) {
+    --colour: #ffcf60;
+    --change: #e1c0ef;
+  }
+
+  .box:nth-child(6n + 2) {
+    --colour: #bde26d;
+    --change: #e13748;
+  }
+
+  .box:nth-child(6n + 3) {
+    --colour: #f79ab0;
+    --change: #a4f5ec;
+  }
+
+  .box:nth-child(6n + 4) {
+    --colour: #c1e6ef;
+    --change: #ffe078;
+  }
+
+  .box:nth-child(6n + 5) {
+    --colour: #da1212;
+    --change: #c7ff67;
+  }
+
+  .box:nth-child(6n) {
+    --colour: #b945d6;
+    --change: #fcb3d4;
+  }
+    </style>
+</head>
+<body>
+  <audio autoplay loop>
+  <source src="Initiation mp3.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+  const music = document.getElementById("bgMusic");
+
+  music.play().catch(error => {
+    console.log("Autoplay blocked:", error);
+  });
+</script>
+    <main class="grid">
+    <div class="box"></div>
+     <div class="box"></div>
+      <div class="box"></div>
+       <div class="box"></div>
+        <div class="box"></div>
+         <div class="box"></div>
+
+         <div class="box"></div>
+     <div class="box"></div>
+      <div class="box"></div>
+       <div class="box"></div>
+        <div class="box"></div>
+         <div class="box"></div>
+         <div class="box"></div>
+
+     <div class="box"></div>
+      <div class="box"></div>
+       <div class="box"></div>
+        <div class="box"></div>
+         <div class="box"></div>
+         <div class="box"></div>
+     <div class="box"></div>
+      <div class="box"></div>
+       <div class="box"></div>
+        <div class="box"></div>
+         <div class="box"></div>
+         <div class="box"></div>
+     <div class="box"></div>
+      <div class="box"></div>
+       <div class="box"></div>
+        <div class="box"></div>
+         <div class="box"></div>
+    </main>
+</body>
+</html>
